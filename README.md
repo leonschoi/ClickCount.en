@@ -1,6 +1,6 @@
 # ClickCounter System
 
-ClickCounter System uses ESP32 units with connected button switch to gather button click information via Wi-Fi and publish reports.
+ClickCounter System uses ESP32 boards with connected button switch to gather button click information via Wi-Fi and publish reports.
 
 This manual follows the sequence of __Overview__ > __Windows Setup__ > __Software Installation__ > __Software User Guide__. Once the software is installed and functioning, User Guides will serve as a self-contained manual use the software.
 
