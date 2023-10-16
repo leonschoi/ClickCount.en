@@ -93,15 +93,7 @@ On the right side of the Serial Monitor window:\
 Set COM baud rate to 115200 baud\
 <img src="https://github.com/leonschoi/ClickCounter.en/assets/29897968/2269de6d-1d80-426d-ba8b-63ef94c5a4ff" alt="Serial Monitor" width="800"/>  
 
-Compile the program in one of two ways:
-
-1. On the menu:\
-   Sketch > Verify/Compile (Ctrl-R)
-2. On the top toolbar, click on the first button showing the check sign.
-
-Compilation messages are shown on the `Output` window.
-
-If it compiles, upload the program in one of two ways:
+Upload the program in one of two ways:
 
 1. On the menu:\
    Sketch > Upload (Ctrl-U)
