@@ -51,7 +51,7 @@ Log files record the status and error information as it executes.
 
 The process information and errors are written to the log file:
 
-<img src="Log.png" alt="Log" width="500"/>
+<img src="https://github.com/leonschoi/ClickCount.en/assets/29897968/ff58c875-d2d6-409d-ae79-95a3fdfe260f" alt="Log" width="500"/>
 
 When this webpage is opened or refreshed, the page automatically scrolls to the bottom so that the lastest information is shown.
 
@@ -59,19 +59,19 @@ When this webpage is opened or refreshed, the page automatically scrolls to the 
 
 An ESP32 board with a unique serial number is mapped to a machine `station ID`.  The mapping information is obtained from GoogleSheets when the ClickTally service starts. This webpage shows the latest mapping information obtained.
 
-<img src="ESP32.png" alt="ESP32" width="500"/>
+<img src="https://github.com/leonschoi/ClickCount.en/assets/29897968/eaef97c3-1770-4e02-b3ff-d1eacc0063eb" alt="ESP32" width="500"/>
 
 ### 4.3. Work Days of the Week
 
 Because the ClickTally service run continously in the background, it needs to know when to not process the information.  The working days of the week are specified in the file `C:\YIC\Config\DaysOfWeek.json` (see the ClickTally chapter for more explanation). The information currently used for processing is displayed on the webpage:
 
-<img src="Days.png" alt="Days" width="500"/>
+<img src="https://github.com/leonschoi/ClickCount.en/assets/29897968/c7cbd128-2fbf-41ce-92b0-5ff087a630e8" alt="Days" width="500"/>
 
 ### 4.4. Work Time to Slot ID Mapping
 
 Also due to continuous background process, the work time needs to be specified. Work Time to Slot ID Mapping is used for the working time of the day and also to specify the time slot to accumulate click counts. It is specified in the file `C:\YIC\Config\TimeSlot.json` (see the ClickTally chapter for more explanation). The information currently used for processing is displayed on the webpage:
 
-<img src="TimeSlot.png" alt="TimeSlot" width="500"/>
+<img src="https://github.com/leonschoi/ClickCount.en/assets/29897968/720241fc-b152-4faa-9c68-a8746cebabe2" alt="Time Slot" width="500"/>
 
 The slot time interval is measured from the assigned time to the next slot's time. Therefore the final interval time with 'None' as the slot ID is required to mark the end time of the last working slot, i.e., the end of the working day.
 
@@ -79,4 +79,4 @@ The slot time interval is measured from the assigned time to the next slot's tim
 
 Combining the information from Work Days of the Week and Work Time to Slot ID Mapping, a calendar showing the weekly operation schedule is presented.
 
-<img src="Calendar.png" alt="Calendar" width="500"/>
+<img src="https://github.com/leonschoi/ClickCount.en/assets/29897968/e1d7190e-6109-4e89-8648-3a2a4527b539" alt="Calendar" width="500"/>
