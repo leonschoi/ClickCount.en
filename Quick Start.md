@@ -6,7 +6,7 @@ ESP32 boards with button switches are used to send the signal via Wi-Fi to the C
 
 The ClickCounter service captures and saves the signal, and the ClickTally service processes the saved data to make reports.
 
-The reports are shown on the ClickCounter webpage, and the write time of report files is updated in real-time.
+The reports are shown on the ClickCounter webpage, and the write time of report files are updated in real-time.
 
 ## 1. Template Excel File
 
