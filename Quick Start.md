@@ -43,7 +43,7 @@ Clicking on a report file name will open a new web browser tab showing the repor
 
 If the page is too big, use Ctrl- to shrink the view.
 
-## 4. Logs
+## 4. Log
 
 The process information and errors are written to the log file:
 
