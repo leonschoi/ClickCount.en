@@ -22,8 +22,7 @@ The template Excel files to be converted to report HTML files are placed in the 
 
 The ClickCounter webpage can be launched with `http://"Hostname"` on the local network (or `http://localhost` on the installed computer):
 
-<img src="ClickCounter.png" alt="ClickCounter" width="500"/>
-<img src="https://github.com/leonschoi/ClickCounter.en/assets/29897968/812202f5-c357-406c-a9a5-4a429a5adc5b" alt="Template" width="500"/>
+<img src="https://github.com/leonschoi/ClickCount.en/assets/29897968/434b95a8-3963-4135-9c62-71753f798df1" alt="ClickCounter webpage" width="500"/>
 
 The files under the Current section are the files being updated at the time of monitoring. The file names are shown with the last updated time, and listed in the decreasing order of time, so that the user can verify the update progress at a glance.
 
@@ -39,7 +38,8 @@ Each filename can be clicked to view the content. The clicked page will open in 
 
 Clicking on a report file name will open a new web browser tab showing the report page. It contains the lastest accumulated click count for the cells that match `station ID`-`time slot ID` label in the template Excel file.
 
-<img src="Report.jpg" alt="Report" width="500"/>
+<img src="https://github.com/leonschoi/ClickCounter.en/assets/29897968/b32f9563-29af-4dae-b19e-d833717877d5" alt="Report" width="800"/>
+
 
 If the page is too big, use Ctrl- to shrink the view.
 
