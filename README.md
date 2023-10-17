@@ -13,6 +13,7 @@ For the quick system setup procedure:
 ---
 
 ## 1. ClickCounter Website
+
 0. [General Overview](1.%20ClickCounter%20Website/0.%20General%20Overview.md)
 1. [Windows Web Server Setup](1.%20ClickCounter%20Website/1.%20Windows%20Web%20Server%20Setup.md)
 2. [ClickCounter Website Installation](1.%20ClickCounter%20Website/2.%20ClickCounter%20Website%20Installation.md)
