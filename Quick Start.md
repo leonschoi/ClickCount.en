@@ -1,6 +1,6 @@
 # Quick Start
 
-The ClickCounter System monitors the work progress by capturing the button click signals from the machine stations and presenting the report of accumulated signals grouped by the station and time interval.
+The ClickCounter System monitors workflow progress by capturing button click signals from machine stations and presenting a report of accumulated signals grouped by station and time interval.
 
 It is structured so that a user simply needs to supply Excel files as templates to base the reports on. The ClickCounter System will record the clicks and update the reports, and save the reports to archive at the end of the day. The user can view the reports and check the progress through ClickCounter website.
 
