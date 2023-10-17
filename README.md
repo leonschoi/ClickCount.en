@@ -4,10 +4,10 @@ ClickCounter System uses ESP32 boards with connected button switch to gather but
 
 This manual follows the sequence of __Overview__ > __Windows Setup__ > __Software Installation__ > __Software User Guide__. Once the software is installed and functioning, User Guides will serve as a self-contained manual use the software.
 
-For a quick general outline of the usage:
+For the quick general outline of the usage:
 - [Quick Start](Quick%20Start.md)
 
-For a quick system setup procedure:
+For the quick system setup procedure:
 - [Quick Setup](Quick%20Setup.md)
 
 ---
