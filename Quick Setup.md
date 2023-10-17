@@ -1,8 +1,10 @@
 # Quick Setup
 
+This is a setup procedure for already installed system. For a full installation, see the installation sections of the 4 component chapters.
+
 ## Windows
 
-Once all installation files are copied into destination directories and IIS is configured (see the Installation sections of the 4 component chapters), ClickCounter system can be brought up or down quickly as follows:
+Once all installation files are copied into destination directories and IIS is configured, the ClickCounter system can be brought up or down quickly as follows:
 
 ### Web Server
 
@@ -11,7 +13,7 @@ Once all installation files are copied into destination directories and IIS is c
 - On the left pane of `Internet Information Services (IIS) Manager`, expand `"Hostname" (Hostname\User)` > `Sites`\
   <img src="https://github.com/leonschoi/ClickCounter.en/assets/29897968/ca683859-79d6-42a2-8e5e-3f629a234a01" alt="IIS Manager" width="700"/>
 - Click on the `ClickCounter` site.  The `Actions` pane opens on the right side.
-- In the `Manage Website` section, click on `Start` if the website is on `Stop`.
+- In the `Manage Website` section, choose `Start` or `Stop`.
 
 ### ClickCounter and ClickTally Services
 
@@ -31,9 +33,11 @@ In Windows Explorer of any computer in the local network shared by the computer 
 Click on `ClickTemplate` or keep typing to complete `\\"Hostname"\ClickTemplate` then `Enter`.\
 <img src="https://github.com/leonschoi/ClickCounter.en/assets/29897968/e8801590-321c-4670-9fac-d07d049dcb22" alt="ClickTemplate" width="700"/>
 
-Copy the template Excel files into this directory to be processed by `ClickTally`.  A file can be added or removed any time. When a file is added, `ClickTally` will convert it to a report HTML file and include it in the process.  When a file is removed, the corresponding report HTML file will remain but it will not be included in the further process.  
+Copy the template Excel files into this directory to be processed by `ClickTally`.  A file can be added or removed any time. When a file is added, `ClickTally` will immediately convert it to a report HTML file and include it in the ongoing process.  When a file is removed, the corresponding report HTML file will remain but it will not be included in the further process.  
 
 ## ESP32
+
+After the Arduino IDE and required libraries are installed, the C++ code can be modified to connect to ClickCounter TCP listener.
 
 Connect the `"Hostname"` computer to an ESP32 board with a micro USB cable. In Windows Explorer, go to `C:\YIC\ESP32_click_counter\` directory:\
 <img src="https://github.com/leonschoi/ClickCounter.en/assets/29897968/48faf241-d25c-4b95-847e-3e932763358e" alt="ESP32_click_counter" width="700"/>
@@ -50,7 +54,7 @@ Double click on the `ESP32_click_counter.ino` file to bring up Arduino IDE with 
 HostInfo host1("DESKTOP-0AJUHED", PORT_NUMBER);
 ```
 
-`LoginInfo` array contains a list of Wi-Fi loginID/password and host computer in the network. Set the `ssid` and `password` that the host computer `DESKTOP-0AJUHED` is connected to:
+`LoginInfo` array contains a list of Wi-Fi loginID/password and host computer in the network. Set the `ssid` and `password` of the local Wi-Fi network:
 
 ```C++
 //
@@ -65,8 +69,9 @@ LoginInfo loginInfoStore[MAX_LOGIN_INFO_SIZE] {
 Now click on the `config.h` tab:\
 <img src="https://github.com/leonschoi/ClickCounter.en/assets/29897968/1fa9bfa3-3547-4731-8b41-b36b9cb26793" alt="config.h" width="800"/>
 
-`PORT_NUMBER` is 8201 for ClickCounter.\
-`MAX_LOGIN_INFO_SIZE` is used to specify the Wi-Fi loginID/password list entry count. In this case, `=1` since there is only one entry:
+- `pinNumberButton` is the pin number that the button switch is connected to
+- `PORT_NUMBER` is 8201 for ClickCounter service.
+- `MAX_LOGIN_INFO_SIZE` is used to specify the Wi-Fi loginID/password list entry count in `config.cpp`. In this case, `=1` since there is only one entry:
 
 ```C++
 //
@@ -76,7 +81,9 @@ const int PORT_NUMBER = 8201;
 const int MAX_LOGIN_INFO_SIZE = 1;
 ```
 
-The following items must be set before running the program. They tend to be unselected when the environment changes, hence need to be checked often.
+When the program runs in ESP32, it will go through the Wi-Fi `ssid`/`password` list in order and try to connect for 20 seconds each.  Once it connects to a network, it will go to the button click sending mode.
+
+The following items in Arduino IDE must be set before running the program. They tend to be unselected when the environment changes, hence need to be checked often.
 
 Board selection:\
 Tools > Board > esp32 > ESP32 Dev Module\
@@ -93,7 +100,15 @@ On the right side of the Serial Monitor window:\
 Set COM baud rate to 115200 baud\
 <img src="https://github.com/leonschoi/ClickCounter.en/assets/29897968/2269de6d-1d80-426d-ba8b-63ef94c5a4ff" alt="Serial Monitor" width="800"/>  
 
-Upload the program in one of two ways:
+Compile the program in one of two ways:
+
+1. On the menu:\
+   Sketch > Verify/Compile (Ctrl-R)
+2. On the top toolbar, click on the first button showing the check sign.
+
+Compilation messages are shown on the `Output` window.
+
+Compile and upload the program in one of two ways:
 
 1. On the menu:\
    Sketch > Upload (Ctrl-U)
