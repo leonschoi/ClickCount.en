@@ -7,7 +7,7 @@ The ClickCounter System consists of:
 - ClickCounter Service
 - ClickTally Service
 
-ESP32_boards send button press data over Wi-Fi to ClickCounter service for data collection. ClickTally service processes the data and stores it in a report file. ClickCounter website displays all reports and logs with last updated time to verify activity.
+ESP32 boards send button press data over Wi-Fi to ClickCounter service for data collection. ClickTally service processes the data and stores it in a report file. ClickCounter website displays all reports and logs with last updated time to verify activity.
 
 This manual follows the sequence of __Overview__ > __Windows Setup__ > __Software Installation__ > __Software User Guide__. Once the software is installed and functioning, User Guides will serve as a self-contained manual use the software.
 
